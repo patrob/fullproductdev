@@ -8,7 +8,9 @@ const posts = await getCollection('blog');
   <h1>Full Product Dev Blog</h1>
   <ul>
     {posts.map(post => (
-      <li><a href={post.slug}>{post.data.title}</a></li>
+      <li>
+        <a href={`/blog/${post.slug}/`}>{post.data.title}</a> - {post.data.pubDate.toISOString().split('T')[0]}
+      </li>
     ))}
   </ul>
 </Layout>
