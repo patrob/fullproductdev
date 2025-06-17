@@ -4,16 +4,102 @@ import { getCollection, getEntry } from 'astro:content';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
-  return posts.map(post => ({ params: { slug: post.slug } }));
+  return posts.map(post => ({ 
+    params: { slug: post.slug },
+    props: { post }
+  }));
 }
 
 export const prerender = true;
 
 const { slug } = Astro.params;
 const post = await getEntry('blog', slug);
+
+if (!post) {
+  return Astro.redirect('/404');
+}
+
+const { Content } = await post.render();
+
+function formatDate(date: Date) {
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }).format(date);
+}
+
+function getReadingTime(content: string) {
+  const wordsPerMinute = 200;
+  const words = content.split(/\s+/).length;
+  return Math.ceil(words / wordsPerMinute);
+}
 ---
 
-<Layout>
-  <h2>{post.data.title}</h2>
-  <article class="post-content">{post.body}</article>
+<Layout 
+  title={`${post.data.title} | Full Product Dev`}
+  description={post.data.description}
+>
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <h1 class="article-title">{post.data.title}</h1>
+        
+        <div class="article-meta">
+          <span>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+            </svg>
+            {formatDate(post.data.pubDate)}
+          </span>
+          
+          <span>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+            </svg>
+            {getReadingTime(post.body)} min read
+          </span>
+          
+          <span>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+            </svg>
+            {post.data.author}
+          </span>
+        </div>
+        
+        {post.data.tags && post.data.tags.length > 0 && (
+          <div class="article-tags">
+            {post.data.tags.map(tag => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        )}
+      </header>
+      
+      <div class="article-content">
+        <Content />
+      </div>
+      
+      <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color); text-align: center;">
+        <a 
+          href="/" 
+          style="color: var(--primary-600); font-weight: 500; text-decoration: none;"
+        >
+          ← Back to Home
+        </a>
+      </footer>
+    </article>
+  </div>
 </Layout>
+
+<style>
+  .article-tags {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
+</style>

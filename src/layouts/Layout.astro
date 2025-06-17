@@ -1,20 +1,118 @@
 ---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Full Product Dev - Modern Product Development Blog",
+  description = "Insights on product development, engineering best practices, and building great software products."
+} = Astro.props;
 ---
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Full Product Dev Blog</title>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="/styles/global.css" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Full Product Dev Team" />
+    <link rel="canonical" href={Astro.url} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Full Product Dev" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:site" content="@fullproductdev" />
+    
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Full Product Dev",
+        "description": "Insights on product development, engineering best practices, and building software that users love",
+        "url": "https://fullproductdev.example.com",
+        "author": {
+          "@type": "Organization",
+          "name": "Full Product Dev Team"
+        }
+      }
+    </script>
   </head>
   <body>
-    <main>
-      <header>
-        <h1><a href="/">Full Product Dev</a></h1>
-        <p class="tagline">Shifting product focus left to build great products.</p>
-      </header>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header">
+      <div class="header-content">
+        <a href="/" class="logo">
+          Full Product Dev
+        </a>
+        <nav class="nav">
+          <a href="/" class="nav-link">Home</a>
+          <a href="/blog" class="nav-link">Blog</a>
+          <a href="/about" class="nav-link">About</a>
+          <button class="theme-toggle" aria-label="Toggle dark mode">
+            🌙
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
       <slot />
     </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Full Product Dev. Building better products through code.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Theme toggle functionality
+      const themeToggle = document.querySelector('.theme-toggle');
+      const html = document.documentElement;
+
+      // Check for saved theme preference or default to 'light'
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      html.setAttribute('data-theme', currentTheme);
+      
+      // Update button text based on current theme
+      if (currentTheme === 'dark' && themeToggle) {
+        themeToggle.textContent = '☀️';
+      }
+
+      themeToggle?.addEventListener('click', () => {
+        const currentTheme = html.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Update button text
+        if (themeToggle) {
+          themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+        }
+      });
+    </script>
   </body>
 </html>
