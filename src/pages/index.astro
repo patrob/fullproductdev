@@ -5,11 +5,12 @@ const posts = await getCollection('blog');
 ---
 
 <Layout>
-  <h1>Full Product Dev Blog</h1>
-  <ul>
+  <h2>Recent Posts</h2>
+  <ul class="post-list">
     {posts.map(post => (
-      <li>
-        <a href={`/blog/${post.slug}/`}>{post.data.title}</a> - {post.data.pubDate.toISOString().split('T')[0]}
+      <li class="post-item">
+        <a class="post-link" href={`/blog/${post.slug}/`}>{post.data.title}</a>
+        <span class="post-date">{post.data.pubDate.toISOString().split('T')[0]}</span>
       </li>
     ))}
   </ul>

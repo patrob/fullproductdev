@@ -14,6 +14,6 @@ const post = await getEntry('blog', slug);
 ---
 
 <Layout>
-  <h1>{post.data.title}</h1>
-  <article>{post.body}</article>
+  <h2>{post.data.title}</h2>
+  <article class="post-content">{post.body}</article>
 </Layout>
