@@ -1,0 +1,37 @@
+version: 2
+updates:
+  # Enable version updates for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/New_York"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "probinson"
+    assignees:
+      - "probinson"
+    commit-message:
+      prefix: "chore"
+      prefix-development: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "automated"
+    # Group updates for related packages
+    groups:
+      astro:
+        patterns:
+          - "astro*"
+          - "@astrojs/*"
+      eslint:
+        patterns:
+          - "eslint*"
+          - "@typescript-eslint/*"
+      typescript:
+        patterns:
+          - "typescript"
+          - "@types/*"
+
