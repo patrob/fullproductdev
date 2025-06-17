@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+const { slug } = Astro.params;
+const post = await getEntry('blog', slug);
+---
+
+<Layout>
+  <h1>{post.data.title}</h1>
+  <article>{post.body}</article>
+</Layout>
