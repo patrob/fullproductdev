@@ -9,7 +9,7 @@ const posts = await getCollection('blog');
   <ul>
     {posts.map(post => (
       <li>
-        <a href={post.slug}>{post.data.title}</a> - {post.data.pubDate.toISOString().split('T')[0]}
+        <a href={`/blog/${post.slug}/`}>{post.data.title}</a> - {post.data.pubDate.toISOString().split('T')[0]}
       </li>
     ))}
   </ul>
