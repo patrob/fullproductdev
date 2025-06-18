@@ -408,30 +408,6 @@ header h1 a:hover {
   color: var(--primary-600);
 }
 
-.theme-toggle {
-  background: none;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 0.5rem;
-  cursor: pointer;
-  color: var(--text-secondary);
-  transition: all var(--transition-fast);
-}
-
-.theme-toggle:hover {
-  background-color: var(--bg-tertiary);
-  border-color: var(--border-hover);
-}
-
-/* Theme toggle icon switching */
-.theme-toggle::after {
-  content: "🌙";
-}
-
-[data-theme="dark"] .theme-toggle::after {
-  content: "☀️";
-}
-
 /* Main Content */
 main {
   min-height: calc(100vh - var(--header-height));
@@ -560,22 +536,58 @@ main {
 .footer {
   background-color: var(--bg-secondary);
   border-top: 1px solid var(--border-color);
-  padding: 3rem 0;
+  padding: 1.5rem 0;
   margin-top: 4rem;
 }
 
 .footer-content {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1.5rem;
   color: var(--text-muted);
 }
 
+.footer-left p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  background-color: transparent;
+}
+
+.social-link:hover {
+  color: var(--primary-600);
+  background-color: var(--primary-50);
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .social-link:hover {
+  background-color: var(--primary-900);
+  color: var(--primary-400);
+}
+
 /* Focus states for accessibility */
 a:focus,
-button:focus,
-.theme-toggle:focus {
+button:focus {
   outline: 2px solid var(--primary-600);
   outline-offset: 2px;
 }
@@ -606,7 +618,6 @@ button:focus,
 @media print {
   .header,
   .footer,
-  .theme-toggle,
   .hero-cta {
     display: none;
   }
@@ -650,6 +661,20 @@ button:focus,
   .blog-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .footer-left p {
+    font-size: 0.8rem;
+  }
+
+  .social-links {
+    justify-content: center;
   }
 }
 
