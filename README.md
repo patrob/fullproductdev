@@ -24,6 +24,12 @@ To build for production:
 npm run build
 ```
 
+## Security Headers
+
+This site includes middleware and static header configuration to set recommended
+security headers. These headers help the site achieve a passing score on common
+online security header tests.
+
 ## Learn More
 - [Astro Documentation](https://docs.astro.build/)
 - [Official Astro Blog Template](https://astro.build/themes/details/astro-blog)
