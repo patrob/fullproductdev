@@ -1,13 +1,13 @@
 ---
 title: "Full-Stack Is Just the Start. Full Product Is the Future."
 description: "In a world where AI can write code in seconds, technical skills aren't enough. Here's why it's time to think like a Full Product Developer."
-pubDate: 2025-07-07T00:00:00.000Z
-author: "Your Name"
+pubDate: 2025-07-08T00:00:00.000Z
+author: "Patrick Robinson"
 tags: ["full product dev", "software development", "product thinking", "developer growth"]
 draft: false
 ---
 
-When AI can spin up a working prototype in minutes, writing code isn’t the hard part anymore. The real value? It’s in knowing what to build—and why.
+>When AI can spin up a working prototype in minutes, writing code isn’t the hard part anymore. The real value? It’s in knowing what to build—and why.
 
 ## The Game Has Changed
 
