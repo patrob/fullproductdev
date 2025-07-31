@@ -18,7 +18,7 @@ In today’s fast-moving, AI-accelerated world, being a “full stack” develop
 As AI handles more of the “how,” our value shifts to knowing what to build and why. Teams need developers who think upstream, challenge assumptions, and align on real value.
 
 
-I also shared these ideas in my talk at DevOpsDays Austin—watch the video below:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0CF9fg_CCkg?si=rIxZnNam61WKb5Gd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+I also shared these ideas in my talk at DevOpsDays Austin—[watch the talk on YouTube](https://www.youtube.com/watch?v=0CF9fg_CCkg).
 
 *Read the original post for the full story and practical tips on growing full product thinking in your team!*
