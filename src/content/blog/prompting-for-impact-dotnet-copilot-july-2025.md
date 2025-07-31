@@ -31,20 +31,17 @@ Thank you for attending the presentation! Below you'll find all the resources, l
 
 ## 📊 Presentation Materials
 
-[Download Slides](/slides/Prompting%20for%20Impact%20in%20.NET.pdf) - PDF version of today's presentation
-
-<PDFViewer
-  src="/slides/Prompting%20for%20Impact%20in%20.NET.pdf"
-  title="Prompting for Impact in .NET - DNUG July 2025"
-  height="700"
-/>
-
-- [GitHub Repository](https://github.com/patrob/prompting-for-impact-dotnet-demo) - Demo code and examples from the presentation
 - [Watch the Recording](#) - Video of the full presentation *(Coming Soon)*
+- [GitHub Repository](https://github.com/patrob/prompting-for-impact-dotnet-demo) - Demo code and examples from the presentation
+- [Download Slides](/slides/Prompting%20for%20Impact%20in%20.NET.pdf) - PDF version of today's presentation
 
-### View the Slides Inline
-
-
+<iframe
+  src="/slides/Prompting%20for%20Impact%20in%20.NET.pdf"
+  width="100%"
+  height="600px"
+  style="border: none;"
+>
+</iframe>
 
 
 ## 📧 Follow Up
