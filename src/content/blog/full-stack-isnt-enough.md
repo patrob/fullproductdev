@@ -1,6 +1,6 @@
 ---
 title: "Full Stack Isn't Enough"
-description: "Coming soon..."
+description: "Why modern devs need more than just full stack skills—think product, not just code."
 pubDate: 2025-06-18T00:00:00.000Z
 author: "Patrick Robinson"
 tags: ["product", "full stack", "development", "future"]
