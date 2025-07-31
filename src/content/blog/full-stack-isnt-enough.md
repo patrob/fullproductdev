@@ -20,10 +20,6 @@ As AI handles more of the “how,” our value shifts to knowing what to build a
 
 I also shared these ideas in my talk at DevOpsDays Austin—watch the video below:
 
----
-import YouTubeEmbed from '../../components/YouTubeEmbed.astro'
----
-
 <YouTubeEmbed id="0CF9fg_CCkg" title="DevOpsDays Austin 2025 - Full Stack Isn't Enough" />
 
 *Read the original post for the full story and practical tips on growing full product thinking in your team!*

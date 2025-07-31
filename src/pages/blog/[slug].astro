@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection, getEntry } from 'astro:content';
+import PDFViewer from 'src/components/PDFViewer.astro';
+import YouTubeEmbed from 'src/components/YouTubeEmbed.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');

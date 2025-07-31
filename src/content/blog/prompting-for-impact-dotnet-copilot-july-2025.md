@@ -33,10 +33,6 @@ Thank you for attending the presentation! Below you'll find all the resources, l
 
 [Download Slides](/slides/Prompting%20for%20Impact%20in%20.NET.pdf) - PDF version of today's presentation
 
----
-import PDFViewer from '../../components/PDFViewer.astro'
----
-
 <PDFViewer
   src="/slides/Prompting%20for%20Impact%20in%20.NET.pdf"
   title="Prompting for Impact in .NET - DNUG July 2025"
