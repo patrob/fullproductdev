@@ -7,7 +7,6 @@ tags: [".net user group", "talks", "copilot"]
 featured: true
 ---
 
-# Prompting for Impact in .NET: Using Copilot to Think, Not Just Code
 
 Thank you for attending the presentation! Below you'll find all the resources, links, and materials referenced during the talk on leveraging GitHub Copilot strategically in .NET development.
 
