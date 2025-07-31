@@ -1,3 +1,32 @@
+/* About Page CTA Section */
+.about-cta {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, var(--primary-50) 0%, var(--bg-secondary) 100%);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: 3rem 2rem 2.5rem 2rem;
+  text-align: center;
+}
+
+.about-cta h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.about-cta-text {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* Modern Design System */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
 
