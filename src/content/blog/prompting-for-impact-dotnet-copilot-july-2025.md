@@ -35,16 +35,10 @@ Thank you for attending the presentation! Below you'll find all the resources, l
 - [GitHub Repository](https://github.com/patrob/prompting-for-impact-dotnet-demo) - Demo code and examples from the presentation
 - [Watch the Recording](#) - Video of the full presentation *(Coming Soon)*
 
-## 🤝 Connect & Continue the Conversation
-
-- **LinkedIn**: [Patrick Robinson](https://www.linkedin.com/in/patrick-robinson-dev)
-- **GitHub**: [patrob](https://github.com/patrob)
-- **X (Twitter)**: [@patrobdev](https://x.com/patrobdev)
-- **YouTube**: [Full Product Dev](https://www.youtube.com/@FullProductDev) *(Coming Soon)*
 
 ## 📧 Follow Up
 
-Have questions or want to dive deeper into any of the topics discussed? Feel free to reach out through any of the channels above, or leave a comment on this post.
+Have questions or want to dive deeper into any of the topics discussed? Feel free to reach out or leave a comment on this post.
 
 ---
 
