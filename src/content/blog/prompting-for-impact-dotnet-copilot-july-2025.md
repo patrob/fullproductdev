@@ -1,3 +1,6 @@
+
+---
+import PDFViewer from '../../components/PDFViewer.astro'
 ---
 title: "Prompting for Impact in .NET: Using Copilot to Think, Not Just Code"
 description: "Resources and materials from the presentation on leveraging GitHub Copilot effectively in .NET development - moving beyond basic code generation to strategic thinking."
@@ -28,11 +31,22 @@ Thank you for attending the presentation! Below you'll find all the resources, l
   - Or get meta, “Give me a prompt that accomplishes ____”
 - Experiment, try new things, document and share it
 
+
 ## 📊 Presentation Materials
 
-- [Download Slides](/slides/Prompting%20for%20Impact%20in%20.NET.pdf) - PDF version of today's presentation
+[Download Slides](/slides/Prompting%20for%20Impact%20in%20.NET.pdf) - PDF version of today's presentation
+<PDFViewer
+  src="/slides/Prompting%20for%20Impact%20in%20.NET.pdf"
+  title="Prompting for Impact in .NET - DNUG July 2025"
+  height="700"
+/>
+
 - [GitHub Repository](https://github.com/patrob/prompting-for-impact-dotnet-demo) - Demo code and examples from the presentation
 - [Watch the Recording](#) - Video of the full presentation *(Coming Soon)*
+
+### View the Slides Inline
+
+
 
 
 ## 📧 Follow Up
