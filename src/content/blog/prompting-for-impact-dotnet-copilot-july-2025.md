@@ -36,7 +36,7 @@ Thank you for attending the presentation! Below you'll find all the resources, l
 - [Download Slides](/slides/Prompting%20for%20Impact%20in%20.NET%20-%20DNUG%20July%202025.pdf) - PDF version of today's presentation
 
 <iframe
-  src="/slides/Prompting%20for%20Impact%20in%20.NET.pdf"
+  src="/slides/Prompting%20for%20Impact%20in%20.NET%20-%20DNUG%20July%202025.pdf"
   width="100%"
   height="600px"
   style="border: none;"
