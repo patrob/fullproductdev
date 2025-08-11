@@ -16,8 +16,8 @@
   "type": "module",
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
-    "@astrojs/sitemap": "^3.4.1",
-    "astro": "^5.9.4"
+    "@astrojs/sitemap": "^3.4.2",
+    "astro": "^5.12.9"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^8.34.1",
