@@ -34,7 +34,7 @@ function getReadingTime(content: string) {
       </p>
       <a href="/blog" class="hero-cta">
         <span>Explore Articles</span>
-        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <svg class="icon icon-sm icon-after" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
           <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
         </svg>
       </a>
@@ -42,8 +42,8 @@ function getReadingTime(content: string) {
   </section>
 
   <!-- Blog Posts Section -->
-  <section class="container">
-    <h2 style="text-align: center; margin-bottom: 3rem; color: var(--text-primary);">
+  <section class="container blog-section">
+    <h2 class="blog-section-title">
       Latest Articles
     </h2>
     
@@ -65,14 +65,14 @@ function getReadingTime(content: string) {
             
             <div class="blog-card-meta">
               <span class="blog-card-date">
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                <svg class="icon icon-sm icon-muted icon-before-sm" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
                   <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
                 </svg>
                 {formatDate(post.data.pubDate)}
               </span>
               
               <span class="blog-card-reading-time">
-                <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                <svg class="icon icon-sm icon-muted icon-before-sm" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
                   <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
                   <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
                 </svg>
@@ -85,7 +85,7 @@ function getReadingTime(content: string) {
     </div>
     
     {sortedPosts.length > 6 && (
-      <div style="text-align: center; margin-top: 3rem;">
+      <div style="text-align: center; margin-top: clamp(2rem, 5vh, 4rem); padding-bottom: clamp(1rem, 3vh, 2rem);">
         <a href="/blog" class="hero-cta">
           View All Articles
         </a>

@@ -29,10 +29,10 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags))];
   title="Blog | Full Product Dev"
   description="Explore our articles on product development, engineering best practices, and building software that users love."
 >
-  <div class="container">
-    <header style="text-align: center; margin-bottom: 4rem;">
-      <h1>Blog</h1>
-      <p style="font-size: 1.25rem; color: var(--text-muted); max-width: 600px; margin: 0 auto;">
+  <div class="container" style="flex: 1; min-height: 100%;">
+    <header style="text-align: center; margin-bottom: clamp(3rem, 6vh, 4rem); padding-top: clamp(1rem, 3vh, 2rem);">
+      <h1 style="font-size: clamp(2.25rem, 5vw, 3rem); margin-bottom: clamp(1rem, 2vh, 1.5rem);">Blog</h1>
+      <p style="font-size: clamp(1.125rem, 2.5vw, 1.25rem); color: var(--text-muted); max-width: min(600px, 90vw); margin: 0 auto;">
         Insights on product development, engineering excellence, and building 
         software that makes a difference.
       </p>
@@ -40,7 +40,7 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags))];
 
     <!-- Featured Posts -->
     {sortedPosts.filter(post => post.data.featured).length > 0 && (
-      <section style="margin-bottom: 4rem;">
+      <section style="margin-bottom: clamp(3rem, 6vh, 4rem);">
         <h2 style="margin-bottom: 2rem; color: var(--text-primary);">Featured Articles</h2>
         <div class="blog-grid">
           {sortedPosts.filter(post => post.data.featured).map(post => (
@@ -64,14 +64,14 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags))];
                 
                 <div class="blog-card-meta">
                   <span class="blog-card-date">
-                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <svg class="icon icon-sm icon-muted icon-before-sm" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
                       <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
                     </svg>
                     {formatDate(post.data.pubDate)}
                   </span>
                   
                   <span>
-                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                    <svg class="icon icon-sm icon-muted icon-before-sm" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
                       <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
                       <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
                     </svg>
@@ -94,8 +94,8 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags))];
     )}
 
     <!-- All Posts -->
-    <section>
-      <h2 style="margin-bottom: 2rem; color: var(--text-primary);">All Articles</h2>
+    <section style="flex: 1; padding-bottom: clamp(2rem, 4vh, 3rem);">
+      <h2 style="margin-bottom: clamp(1.5rem, 4vh, 2rem); color: var(--text-primary); font-size: clamp(1.5rem, 3vw, 2.25rem);">All Articles</h2>
       <div class="blog-grid">
         {sortedPosts.map(post => (
           <article class="blog-card">
@@ -112,14 +112,14 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags))];
               
               <div class="blog-card-meta">
                 <span class="blog-card-date">
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <svg class="icon icon-sm icon-muted icon-before-sm" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
                     <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
                   </svg>
                   {formatDate(post.data.pubDate)}
                 </span>
                 
                 <span>
-                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                  <svg class="icon icon-sm icon-muted icon-before-sm" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
                     <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
                     <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
                   </svg>
