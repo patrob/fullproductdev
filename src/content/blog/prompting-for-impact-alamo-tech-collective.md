@@ -4,7 +4,7 @@ description: "Resources and materials from the presentation on leveraging AI too
 pubDate: 2025-08-01T00:00:00.000Z
 author: "Patrick Robinson"
 tags: ["alamo tech collective", "talks", "ai", "copilot"]
-featured: true
+featured: false
 ---
 
 
