@@ -4,7 +4,7 @@ description: "Resources and materials from the presentation on leveraging GitHub
 pubDate: 2025-07-31T00:00:00.000Z
 author: "Patrick Robinson"
 tags: [".net user group", "talks", "copilot"]
-featured: true
+featured: false
 ---
 
 
