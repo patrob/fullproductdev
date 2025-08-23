@@ -31,7 +31,7 @@ Thank you for attending the presentation at Alamo Tech Collective! Below you'll 
 
 ## 📊 Presentation Materials
 
-- [GitHub Repository](https://github.com/patrob/simple-react-vite-app) - Demo code and examples from the presentation
+- [GitHub Repository](https://github.com/on-par/simple-react-vite-app) - Demo code and examples from the presentation
 - Slides - *Coming soon with additional notes*
 
 *Additional materials and notes from the presentation will be uploaded here soon.*
