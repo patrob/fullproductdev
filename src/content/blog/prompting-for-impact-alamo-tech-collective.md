@@ -58,6 +58,12 @@ Thank you for attending the presentation at Alamo Tech Collective! Below you'll 
 
 *Additional materials and notes from the presentation will be uploaded here soon.*
 
+## Mentions:
+
+### Custom GPT's
+- [PatGPT](https://chatgpt.com/g/g-687d0cec57548191b7b4cb4dec5e625b-patgpt)
+- [Book to GPT](https://chatgpt.com/g/g-687d92698cbc81918c43ed1d4420815c-bookgpt)
+- [Negotiation Trainer](https://chatgpt.com/g/g-6831c7e170b88191b25976027f8da7ba-negotiation-trainer)
 
 ## 📧 Follow Up
 
