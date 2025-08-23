@@ -36,7 +36,7 @@ Thank you for attending the presentation at Alamo Tech Collective! Below you'll 
 
 <div class="pdf-embed-container">
   <embed
-    src="/slides/Prompting%20for%20Impact%20-%20ATC.pdf"
+    src="/slides/Prompting%20for%20Impact%20ATC.pdf"
     type="application/pdf"
     class="pdf-embed"
     aria-label="Prompting for Impact presentation slides"
@@ -49,7 +49,7 @@ Thank you for attending the presentation at Alamo Tech Collective! Below you'll 
       If you're having trouble viewing the PDF, you can:
     </p>
     <ul class="pdf-fallback-list">
-      <li><a href="/slides/Prompting%20for%20Impact%20-%20ATC.pdf" target="_blank" rel="noopener" class="pdf-download-link">Download the PDF directly</a></li>
+      <li><a href="/slides/Prompting%20for%20Impact%20ATC.pdf" target="_blank" rel="noopener" class="pdf-download-link">Download the PDF directly</a></li>
       <li>Try refreshing the page if the PDF doesn't load</li>
       <li>Use a modern browser with PDF support enabled</li>
     </ul>
