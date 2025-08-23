@@ -32,7 +32,29 @@ Thank you for attending the presentation at Alamo Tech Collective! Below you'll 
 ## 📊 Presentation Materials
 
 - [GitHub Repository](https://github.com/on-par/simple-react-vite-app) - Demo code and examples from the presentation
-- Slides - *Coming soon with additional notes*
+- [Download Slides](/slides/Prompting%20for%20Impact%20in%20.NET%20-%20DNUG%20July%202025.pdf) - PDF version of today's presentation
+
+<div class="pdf-embed-container">
+  <embed
+    src="/slides/Prompting%20for%20Impact%20-%20ATC.pdf"
+    type="application/pdf"
+    class="pdf-embed"
+    aria-label="Prompting for Impact presentation slides"
+  />
+  
+  <div class="pdf-fallback-info">
+    <p class="pdf-fallback-title">
+      <span>📄</span>
+      <strong>PDF Viewer:</strong> The presentation slides are embedded above. 
+      If you're having trouble viewing the PDF, you can:
+    </p>
+    <ul class="pdf-fallback-list">
+      <li><a href="/slides/Prompting%20for%20Impact%20-%20ATC.pdf" target="_blank" rel="noopener" class="pdf-download-link">Download the PDF directly</a></li>
+      <li>Try refreshing the page if the PDF doesn't load</li>
+      <li>Use a modern browser with PDF support enabled</li>
+    </ul>
+  </div>
+</div>
 
 *Additional materials and notes from the presentation will be uploaded here soon.*
 
