@@ -43,6 +43,16 @@ function getReadingTime(content: string) {
   <div class="container" style="flex: 1; min-height: 100%; padding-bottom: clamp(2rem, 4vh, 3rem);">
     <article style="margin: clamp(1rem, 3vh, 2rem) 0;">
       <header class="article-header">
+        {post.data.heroImage && (
+          <img 
+            src={post.data.heroImage} 
+            alt={post.data.title} 
+            class="hero-image"
+            style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto 2rem auto; border-radius: var(--radius-lg); box-shadow: 0 2px 16px 0 rgba(0,0,0,0.08);"
+            loading="eager"
+            decoding="async"
+          />
+        )}
         <h1 class="article-title">{post.data.title}</h1>
         
         <div class="article-meta">
@@ -71,7 +81,7 @@ function getReadingTime(content: string) {
         
         {post.data.tags && post.data.tags.length > 0 && (
           <div class="article-tags">
-            {post.data.tags.map(tag => (
+              {(post.data.tags as string[]).map((tag) => (
               <span class="tag">{tag}</span>
             ))}
           </div>
@@ -103,3 +113,8 @@ function getReadingTime(content: string) {
     margin-top: 1rem;
   }
 </style>
+
+  .hero-image {
+    object-fit: cover;
+    background: var(--bg-secondary);
+  }
